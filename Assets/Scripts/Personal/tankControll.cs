@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class tankControll : MonoBehaviour
 {
     //스피드 조정 변수
     [SerializeField]
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float originPosY;
    
     private bool isGround = true;
-    private bool isWalk = false;
+    // private bool isWalk = false;
 
     //움직임 체크 변수
     private Vector3 lastPos;
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        CameraRotation();
+        // CameraRotation();
     }
 
     //지면 체크
@@ -112,10 +112,10 @@ public class PlayerController : MonoBehaviour
     {
         if (isGround)
         {
-            if (Vector3.Distance(lastPos, transform.position) >= 0.01f)
+            /*if (Vector3.Distance(lastPos, transform.position) >= 0.01f)
                 isWalk = true;
             else
-                isWalk = false;
+                isWalk = false;*/
 
             lastPos = transform.position;
         }
